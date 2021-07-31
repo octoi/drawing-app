@@ -22,11 +22,11 @@ window.addEventListener('load', () => {
     function draw(e) {
         if (!painting) return;
 
-        ctx.lineWidth = 10;
+        ctx.lineWidth = 8;
         ctx.lineCap = 'round';
 
         ctx.lineTo(e.clientX, e.clientY);
-        ctx.strokeStyle = 'red';
+        ctx.strokeStyle = '#1ABC9C';
         ctx.stroke();
         ctx.beginPath();
         ctx.moveTo(e.clientX, e.clientY);
