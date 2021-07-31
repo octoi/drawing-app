@@ -6,8 +6,11 @@ window.addEventListener('load', () => {
     resize(); // resize 
 
     let painting = false; // variable that track painting
+    let color = '#1ABC9C';
 
-    // listeners
+    document.querySelectorAll('button', addEventListener('click', (e) => {
+        color = e.target.getAttribute("data-color");
+    }));
 
     function startPosition(e) {
         painting = true;
@@ -26,7 +29,7 @@ window.addEventListener('load', () => {
         ctx.lineCap = 'round';
 
         ctx.lineTo(e.clientX, e.clientY);
-        ctx.strokeStyle = '#1ABC9C';
+        ctx.strokeStyle = color;
         ctx.stroke();
         ctx.beginPath();
         ctx.moveTo(e.clientX, e.clientY);
