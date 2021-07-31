@@ -17,8 +17,18 @@ window.addEventListener('load', () => {
         painting = false;
     }
 
-    canvas.addEventListener('mousemove', startPosition);
+    function draw(e) {
+        if (!painting) return;
+
+        ctx.lineWidth = 10;
+        ctx.lineCap = 'round';
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
+    }
+
+    canvas.addEventListener('mousedown', startPosition);
     canvas.addEventListener('mouseup', finishedPosition);
+    canvas.addEventListener('mousemove', draw);
 });
 
 window.addEventListener('resize', resize); // resize when screen size changes
