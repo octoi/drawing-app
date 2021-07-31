@@ -17,3 +17,14 @@ body {
     position: absolute;
     padding: 10px;
 }
+
+/* button styles */
+.btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.green { background: #1ABC9C; }
