@@ -9,8 +9,9 @@ window.addEventListener('load', () => {
 
     // listeners
 
-    function startPosition() {
+    function startPosition(e) {
         painting = true;
+        draw(e)
     }
 
     function finishedPosition() {
