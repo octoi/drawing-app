@@ -21,12 +21,20 @@
             <button data-color="#FFF" class="btn white"></button>
         </div>
         <div>
-            <button class="btn">
+            <button id="btn-refresh" class="btn">
                 <i class="fas fa-sync"></i>
             </button>
         </div>
     </div>
     <canvas id="canvas"></canvas>
+
+    <script>
+        const btn = document.getElementById('btn-refresh');
+
+        btn.addEventListener('click', () => {
+            window.location.reload();
+        })
+    </script>
     <script src="./app.js"></script>
 </body>
 
