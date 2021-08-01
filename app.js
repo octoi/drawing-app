@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
 
     let painting = false; // variable that track painting
     let color = '#1ABC9C';
+    let lineWidth = 8
 
     document.querySelectorAll('button', addEventListener('click', (e) => {
         color = e.target.getAttribute("data-color");
@@ -25,7 +26,7 @@ window.addEventListener('load', () => {
     function draw(e) {
         if (!painting) return;
 
-        ctx.lineWidth = 8;
+        ctx.lineWidth = lineWidth;
         ctx.lineCap = 'round';
 
         ctx.lineTo(e.clientX, e.clientY);
