@@ -9,7 +9,16 @@ window.addEventListener('load', () => {
     let color = '#1ABC9C';
     let lineWidth = 8
 
-    document.querySelectorAll('button', addEventListener('click', (e) => {
+    const lineWidthBtn = document.getElementById('line-width-btn');
+    lineWidthBtn.addEventListener('click', () => {
+        let newLineWidth = prompt("Enter new line width", lineWidth);
+        if (Number(newLineWidth) == NaN || undefined) return;
+        lineWidth = newLineWidth;
+
+        lineWidthBtn.innerText = lineWidth;
+    })
+
+    document.querySelectorAll('.clr-btn', addEventListener('click', (e) => {
         color = e.target.getAttribute("data-color");
     }));
 
